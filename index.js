@@ -15,7 +15,9 @@
 
 let todoList=JSON.parse(localStorage.getItem('todoList'));
 
-showList();
+if(todoList!=null){
+  showList();
+}
 
 let addButton=document.querySelector('#add-button');
 addButton.addEventListener('click',addtoList);
