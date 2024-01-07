@@ -1,0 +1,123 @@
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html{
+  min-width: 350px;
+}
+
+body{
+  background-color: rgb(235, 238, 238);
+}
+
+header{
+  text-align: center;
+  border-bottom: 2px solid rgb(212, 206, 206);
+  font-size: 25px;
+  color: rgb(126, 122, 117);
+  padding: 5px;
+  min-width: 350px;
+}
+
+main{
+  min-width: 350px;
+}
+
+.input-div{
+  margin-top: 5px;
+  border: 1px solid rgb(173, 167, 167);
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 5px;
+  flex-wrap: wrap;
+}
+
+.text-input{
+  height: 40px;
+  min-width: 300px;
+  font-size: 20px;
+  flex-grow: 2;
+  border-radius: 6px;
+  border: none;
+  margin: 5px;
+  background-color: rgba(212, 215, 219, 0.575);
+}
+
+.date-input{
+  margin: 5px;
+  min-width: 15%;
+  flex-grow: 1.1;
+  height: 40px;
+  min-width: 100px;
+  font-size: 20px;
+  border-radius: 6px;
+  border: none;
+  background-color: white;
+  background-color: rgba(212, 215, 219, 0.575);
+}
+
+#add-button{
+  margin: 5px;
+  font-size: 20px;
+  padding: 5px 10px;
+  flex-grow: 1;
+  border-radius: 20px;
+  background-color: rgba(99, 194, 99, 0.651);
+}
+
+
+
+
+
+.output-div{
+  /* border: 1px solid rgb(165, 162, 162); */
+  margin: 5px 0px;
+  margin-top: 20px;
+}
+
+.list{
+  /* border: 1px solid rgb(112, 109, 109); */
+  margin: 5px 5px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid rgb(112, 109, 109);
+}
+
+.list .output-text{
+  background-color: rgba(192, 192, 185, 0.61);
+  flex-grow: 8;
+  font-size: 20px;
+  border-radius: 3px;
+  width: 95%;
+  text-align: justify;
+}
+
+.list .output-date{
+  min-width: 100px;
+  max-width: 200px;
+  font-size: 15px;
+  padding: 5px 10px;
+  flex-grow: 1;
+  margin: 5px;
+  background-color: rgba(192, 192, 185, 0.61);
+  border-radius: 8px;
+  margin-left: 30px;
+}
+
+.list button{
+  min-width: 40px;
+  max-width: 100px;
+  font-size: 15px;
+  padding: 3px 5px;
+  flex-grow: 1;
+  border-radius: 10px;
+  box-sizing: content-box;
+  background-color: rgba(228, 81, 81, 0.555);
+  margin-left: 30px;
+}
