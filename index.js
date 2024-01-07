@@ -15,10 +15,6 @@
 
 let todoList=[];
 
-if(JSON.parse(localStorage.getItem('todoList'))!=null){
-  todoList=JSON.parse(localStorage.getItem('todoList'));
-}
-
 showList();
 
 let addButton=document.querySelector('#add-button');
@@ -36,7 +32,7 @@ function addtoList(){
 
     localStorage.setItem('todoList',JSON.stringify(todoList));
 
-    showList(inputText,inputDate);
+    showList();
 
     textField.value='';
     dateField.value='';
@@ -44,7 +40,11 @@ function addtoList(){
 }
 
 
-function showList(inputText,date){
+function showList(){
+
+  if(JSON.parse(localStorage.getItem('todoList'))!=null){
+    todoList=JSON.parse(localStorage.getItem('todoList'));
+  }
 
   let listDiv=document.querySelector('.output-div');
   let htmlString='';
@@ -52,8 +52,15 @@ function showList(inputText,date){
     htmlString+=`<div class="list">
     <p class="output-text" id="output-text">${todoList[i].text}</p>
     <p class="output-date" id="output-date">${todoList[i].date}</p>
-    <button>Delete</button>
+    <button onclick="deleteList(${i})">Delete</button>
   </div>`;
     listDiv.innerHTML=htmlString;
   }
+}
+
+
+function deleteList(i){
+  todoList.splice(i,1);
+  localStorage.setItem('todoList',JSON.stringify(todoList));
+  showList();
 }
