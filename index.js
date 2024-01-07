@@ -13,11 +13,13 @@
 // }
 // ];
 
-let todoList=JSON.parse(localStorage.getItem('todoList'));
+let todoList=[];
 
-if(todoList!=null){
-  showList();
+if(JSON.parse(localStorage.getItem('todoList'))!=null){
+  todoList=JSON.parse(localStorage.getItem('todoList'));
 }
+
+showList();
 
 let addButton=document.querySelector('#add-button');
 addButton.addEventListener('click',addtoList);
