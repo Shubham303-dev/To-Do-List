@@ -48,6 +48,14 @@ function showList(){
 
   let listDiv=document.querySelector('.output-div');
   let htmlString='';
+  todoList.sort((a,b)=>{
+    if(a.date>b.date)
+      return 1;
+    else if(a.date<b.date)
+      return -1;
+    else
+      return 0;
+  })
   for(let i=0;i<todoList.length;i++){
     htmlString+=`<div class="list">
     <p class="output-text" id="output-text">${todoList[i].text}</p>
